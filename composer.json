@@ -7,10 +7,13 @@
   ],
   "license": "MIT",
   "type": "project",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "require": {
-    "laravel/framework": "~5.0",
+    "laravel/framework": "^5.1",
     "pingpong/modules": "dev-hotfix/migrations",
     "cartalyst/sentry": "dev-feature/laravel-5",
+    "cartalyst/sentinel": "~2.0",
     "asgardcms/core-module": "dev-develop",
     "asgardcms/dashboard-module": "dev-develop",
     "asgardcms/user-module": "dev-develop",
@@ -21,7 +24,7 @@
     "asgardcms/workshop-module": "dev-develop",
     "asgardcms/flatly-theme": "dev-master",
     "asgardcms/adminlte-theme": "dev-master",
-    "predis/predis": "~1.0",
+    "predis/predis": "^1.0",
     "asgardcms/blog-module": "dev-develop",
     "asgardcms/block": "dev-develop"
   },
@@ -49,11 +52,6 @@
       "Modules\\": "Modules/"
     }
   },
-  "autoload-dev": {
-    "classmap": [
-      "tests/TestCase.php"
-    ]
-  },
   "scripts": {
     "post-install-cmd": [
       "php artisan clear-compiled",
@@ -75,7 +73,5 @@
   },
   "config": {
     "preferred-install": "dist"
-  },
-  "minimum-stability": "dev",
-  "prefer-stable": true
+  }
 }
